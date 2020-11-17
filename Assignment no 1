@@ -1,18 +1,44 @@
-#include <iostream.h>
+#include <iostream>
 using namespace std;
 int main(){
-	int number , counter=1, holder=1;
+	int number,j,k, counter, holder;
 	number=7;
+	k=counter=holder=j=1;
+	k=number-1;
 	while(counter <= number)
 	{
 	for(counter ; counter <= number ; counter++)
 	{
-		cout<<counter;
-		cout<<" ";
+		cout<<counter<<" ";
 	}
-	counter = holder + 1;
+	j++;
+	cout<<"\n";
+	if(k>0){
+	for(int i=1;i<j;i++)
+	       cout<<" ";
+	k--;
+	}
+		counter = holder + 1;
 	holder = counter;
-	
 	}
+	int colcounter=number-1;
+	holder=number-1;
+	j=number-2;
+	
+    while(colcounter--)
+    {
+    	for(int i=1;i<=j;i++)
+    		cout<<" ";
+    	j--;
+    	
+    for(counter=holder;counter<=number;counter++)
+    	cout<<counter  <<" ";
+    
+    holder--;
+    cout<<"\n";
+    
+    if(counter==0)
+         break;
+}
 	return 0;
 }
