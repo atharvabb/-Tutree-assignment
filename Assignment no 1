@@ -1,0 +1,18 @@
+#include <iostream.h>
+using namespace std;
+int main(){
+	int number , counter=1, holder=1;
+	number=7;
+	while(counter <= number)
+	{
+	for(counter ; counter <= number ; counter++)
+	{
+		cout<<counter;
+		cout<<" ";
+	}
+	counter = holder + 1;
+	holder = counter;
+	
+	}
+	return 0;
+}
