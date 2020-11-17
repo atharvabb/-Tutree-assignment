@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+void substringfinder(string mainstr, string sub)
+{
+	int l1=sub.length(),l2=mainstr.length();
+	if (l1> l2)
+	{
+		return;
+	}
+	for (int counter = 0; counter <= l2- l1; counter++)
+	{
+		if (is_permutation(mainstr.begin() + counter, mainstr.begin() + l1 + counter, sub.begin()))
+		{
+			cout << "Substring '" << mainstr.substr(counter, l1) <<
+					"' present at index " << counter<< '\n';
+		}
+	}
+}
+
+int main()
+{
+	string mainstr = "XYYZXZYZXXYZ";
+	string sub = "XYZ";
+
+	substringfinder(mainstr, sub);
+
+	return 0;
+}
